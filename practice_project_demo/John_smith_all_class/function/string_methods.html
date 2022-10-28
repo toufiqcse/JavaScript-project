@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="replace">
+      <button onclick="replaceFunction()">Replace text</button>
+      <h2 id="replace_string">I love Bangladesh</h2>
+    </div>
+    <script>
+      let text = "Toufiqul Isalm";
+      let textResult = text.length;
+      console.log(textResult);
+      console.log(text.toLocaleLowerCase());
+      console.log(text.toLocaleUpperCase());
+      console.log(text.charAt(10));
+      console.log(text.trimStart());
+      console.log(text.slice(-5));
+      console.log(text.startsWith("Tou"));
+      console.log(text.includes("Tou"));
+      //replace string content
+      function replaceFunction() {
+        let heading = document.getElementById("replace_string").innerHTML;
+        document.getElementById("replace_string").innerHTML = heading.replace("Bangladesh", "You Bow");
+      }
+      //location indicate
+    </script>
+  </body>
+</html>

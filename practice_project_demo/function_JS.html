@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #greetings {
+        border: 2px solid black;
+        margin: 5px;
+        color: green;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Javascript Function</h1>
+    <div id="greetings"></div>
+    <script>
+      //function declearation
+      function greetings(name, m) {
+        let myMessage = m;
+        document.getElementById("greetings").innerHTML = myMessage;
+      }
+      let userName = prompt("Type your Name");
+      let myMessage = "Hello" + userName + "Welcome to our Website";
+      //function calling
+      greetings(userName, myMessage);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date Object</title>
+
+    <script src="get_12_hours_format.js"></script>
+  </head>
+
+  <body>
+    <h1>JavaScript Date</h1>
+    <div id="date_result_show">
+      <span id="my_date_span_y"></span>
+      <span id="my_date_span_m"></span>
+      <span id="my_date_span_day"></span>
+      <span id="my_date_span_date"></span>
+      <span id="my_date_span_hour"></span>
+      <span id="my_date_span_min"></span>
+      <span id="my_date_span_sec"></span>
+      <span id="my_date_span_ms"></span>
+    </div>
+
+    <div id="date_format"></div>
+
+    <script>
+      let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Satuerday"];
+
+      // let todaysDate = new Date();
+      //document.getElementById('my_date_span').innerHTML = todaysDate;
+
+      // Date(year, month, day, hours, minutes, seconds, mseconds)
+
+      let myYear = 2019;
+      let myMonth = "03";
+      let myDay = "05";
+      let myHour = "05";
+      let myMinute = "23";
+      let mySecond = "49";
+      let myMsecond = "00";
+
+      // let todaysDate = new Date(myYear, myMonth, myDay, myHour, myMinute, mySecond);
+      // let todaysDate = new Date(myYear, myMonth, myDay, myHour);
+      // let todaysDate = new Date(myYear, myMonth);
+      // let todaysDate = new Date(myYear, myMonth);
+      // document.getElementById("my_date_span").innerHTML = todaysDate;
+
+      // Javascript Built in date Method:
+
+      let dateObject = new Date();
+
+      let myDYear = dateObject.getFullYear();
+      let myDMonth = dateObject.getMonth();
+      let myDDay = dateObject.getDay();
+      let myDDate = dateObject.getDate();
+      let myDHour = dateObject.getHours();
+      let myDMinute = dateObject.getMinutes();
+      let myDSecond = dateObject.getSeconds();
+      let myDMsecond = dateObject.getMilliseconds();
+
+      document.getElementById("my_date_span_y").innerHTML = myDYear;
+      document.getElementById("my_date_span_m").innerHTML = myDMonth;
+      document.getElementById("my_date_span_day").innerHTML = myDDay;
+      document.getElementById("my_date_span_date").innerHTML = myDDate;
+      document.getElementById("my_date_span_hour").innerHTML = myDHour;
+      document.getElementById("my_date_span_min").innerHTML = myDMinute;
+      document.getElementById("my_date_span_sec").innerHTML = myDSecond;
+      document.getElementById("my_date_span_ms").innerHTML = myDMsecond;
+
+      let myDateFormat = myDYear + "/" + months[myDMonth] + "/" + myDDate + " And today is " + days[myDDay];
+      // document.querySelector('#date_format').innerHTML = myDateFormat;
+      document.querySelector("#date_format").innerHTML = get_12_hours_format(myDHour);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // logical-operator
+      //&& operator(all value should be true)
+
+      let classDay = "sunday";
+      let classTime = "10.00pm";
+      if (classDay == "sunday" && classTime == "10.00pm") {
+        document.write("To day have class");
+      } else {
+        document.write("Have no class");
+      }
+      // or|| operator(one value should be true)
+      let nationalID = true;
+      let birthCertificate = true;
+      let perMission = false;
+      if (nationalID == true || birthCertificate == true || perMission == true) {
+        alert("Have access");
+      } else {
+        document.write("No access");
+      }
+      // nested if else (Result Sheet)
+      let myGrade = "";
+      let myMarks = parseInt(prompt("Enter your mark"));
+      //nested if elseif
+      if (myMarks >= 80) {
+        myGrade = "A+";
+      } else if (myMarks >= 70 && myMarks <= 79) {
+        myGrade = "A";
+      } else if (myMarks >= 60 && myMarks <= 69) {
+        myGrade = "A-";
+      } else if (myMarks >= 50 && myMarks <= 59) {
+        myGrade = "B";
+      } else if (myMarks >= 40 && myMarks <= 49) {
+        myGrade = "C";
+      } else if (myMarks >= 33 && myMarks <= 39) {
+        myGrade = "D";
+      } else if (myMarks >= 0 && myMarks <= 32) {
+        myGrade = "F";
+      }
+      document.write("Your Result Is:" + myGrade);
+      //=============not ! operator
+    </script>
+  </body>
+</html>

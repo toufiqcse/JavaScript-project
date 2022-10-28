@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .my_Number {
+        border: 2px solid black;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Javascript summation</h1>
+
+    <script>
+      // loop(3 part: 1. initialize 2.  condition 3. increment)
+      let m = parseInt(prompt("Enter first number"));
+      let n = parseInt(prompt("Enter last number"));
+      let sum = 0;
+      for (let x = m; x <= n; x = x + 1) {
+        sum = sum + x;
+      }
+      document.write("Result = " + sum);
+    </script>
+  </body>
+</html>

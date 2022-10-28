@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .my_Number {
+        border: 2px solid black;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Javascript Loop</h1>
+
+    <div id="loop_data">
+      <div class="my_Number">1</div>
+    </div>
+
+    <script>
+      // loop(3 part: 1. initialize 2.  condition 3. increment)
+      let myDiv = "";
+      for (let i = 1; i <= 20; i = i + 1) {
+        myDiv += "<div class='my_Number'>" + i + "</div>";
+      }
+      document.getElementById("loop_data").innerHTML = myDiv;
+    </script>
+  </body>
+</html>

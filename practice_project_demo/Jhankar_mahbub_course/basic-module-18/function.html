@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Function</title>
+  </head>
+  <body>
+    <h1>HTML Function</h1>
+    <script>
+      function loveLetter() {
+        console.log("I love you");
+      }
+      console.log("I hate you");
+      loveLetter();
+      console.log(" I will marry you");
+      loveLetter();
+      //functiomn with parameter
+      function lostTaka(taka) {
+        console.log("I have lost:", taka);
+      }
+      lostTaka(12302);
+      //advanced parameter
+      function tShirt(taka) {
+        console.log("T-shirt er price", taka);
+        console.log("T-shirt den");
+        let tShirtprice = 100;
+        let tShirtQty = taka / tShirtprice;
+        return tShirtQty; //return function
+      }
+      let tShirtAmount = 600;
+      let shirt = tShirt(tShirtAmount); //function call & variable
+      console.log("Ai nen T-shirt:", shirt);
+    </script>
+  </body>
+</html>

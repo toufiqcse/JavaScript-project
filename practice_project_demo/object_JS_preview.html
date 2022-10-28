@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Object</title>
+    <style>
+      .personinfo {
+        box-sizing: border-box;
+        padding: 15px;
+        width: 350px;
+        border: 2px solid red;
+        margin: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Javascript Object</h1>
+    <div id="info_container"></div>
+    <script>
+      const personInfo = [
+        {
+          name: "Toufiq",
+          email: "toufiqcse7@gmail.com",
+          gender: "Male",
+          age: 24,
+          contact: "01779764552",
+        },
+        {
+          name: "Karim",
+          email: "toufiqcse7@gmail.com",
+          gender: "Male",
+          age: 24,
+          contact: "01779764552",
+        },
+        {
+          name: "Rabiul",
+          email: "toufiqcse7@gmail.com",
+          gender: "Male",
+          age: 28,
+          contact: "01779764552",
+        },
+        {
+          name: "Rabeya",
+          email: "toufiqcse7@gmail.com",
+          gender: "Female",
+          age: 19,
+          contact: "01779764552",
+        },
+        {
+          name: "Rabeya",
+          email: "toufiqcse7@gmail.com",
+          gender: "Female",
+          age: 19,
+          contact: "01779764552",
+        },
+      ];
+      let numberOfPerson = personInfo.length;
+      let infoDiv = "";
+      for (let i = 0; i < numberOfPerson; i++) {
+        let personData = personInfo[i];
+        infoDiv += "<div class='person_info'>";
+        infoDiv += "<ul>";
+        infoDiv += "<li>Name: " + personData.name + "</li>";
+        infoDiv += "<li>Email: " + personData.email + "</li>";
+        infoDiv += "<li>Gender: " + personData.gender + "</li>";
+        infoDiv += "<li>Age: " + personData.age + "</li>";
+        infoDiv += "<li>Contact: " + personData.contact + "</li>";
+        infoDiv += "</ul>";
+        infoDiv += "</div>";
+      } //end of loop
+      document.getElementById("info_container").innerHTML = infoDiv;
+      console.log('hello JS');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #total {
+        color: red;
+        padding: 10px;
+        background-color: beige;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Prodct Price: 100</p>
+    <p>Vat : 2 %</p>
+    <p>Total product : 1</p>
+    <p id="total"></p>
+    <script>
+      let price = 100;
+      let VAT = 0.05;
+      let total = `Total Sell: ${(price * (1 + VAT)).toFixed(2)}`;
+      document.getElementById("total").innerHTML = total;
+      console.log();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let person1 = {
+        name: "Toufiq",
+        age: parseInt(prompt("Enter your age: ")),
+        status: "resident",
+      };
+      let person2 = {
+        name: "Hasan",
+        age: 20,
+        status: "resident",
+      };
+      if (person1.age >= 18 && person1.status === "resident") {
+        console.log("You are Adult");
+      } else if (person1.age < 18 && person1.status === "resident") {
+        console.log("You are Child");
+      }
+    </script>
+  </body>
+</html>

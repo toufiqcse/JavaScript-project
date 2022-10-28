@@ -1,0 +1,161 @@
+/* Custom CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'nunito', sans-serif;
+
+}
+h1{
+  font-size: 70px;
+}
+#counter{
+  color: #c34848;
+  font-size: 70px;
+  font-weight: 700;
+  justify-content: center;
+  justify-content: center;
+  margin: 50%;
+}
+.btn-container{
+  
+  display: flex;
+  justify-content: space-around;
+}
+/* counter for cart system */
+/* #sub{
+  padding: 10px;
+  font-size: 40px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+}
+#add{
+  padding: 10px;
+  font-size: 40px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+} */
+/* input#qtyBox{
+  padding: 10px;
+  font-size: 40px;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  width: 100px;
+  margin: 0 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-align: center;
+} */
+/* For counter click function */
+input#fieldBox{
+  padding: 10px;
+  font-size: 40px;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  width: 100px;
+  margin: 0 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+/* for cart system */
+.cart-body{
+  border: 1px solid #eeeeee;
+  border-radius: 10px !important;
+}
+/* .border{
+  /* border: 1px solid #eeeeee;
+  border-radius: 10px !important; */
+
+ */
+h1{
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+
+}
+
+
+ img{
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  display: block;
+  
+}
+
+.cart-header{
+  background: #eeeeee;
+  text-align: center;
+}
+.cart-item{
+  text-align: center;
+  padding: 10px 0px;
+}
+.product{
+  border: 1px solid #eee;
+}
+
+/* shopping cart */
+i{
+  margin-right: 10px;
+}
+input:focus,
+button:focus,
+.form-control:focus{
+  outline: none;
+  box-shadow: none;
+}
+.form-control:disabled, .form-control[read-only]{
+  background-color: #fff;
+}
+.table tr,
+.table tr td{
+  vertical-align: middle;
+}
+.button-container{
+  display: flex;
+  align-items: center;
+}
+.button-container .form-control{
+  max-width: 80px;
+  text-align: center;
+  display: inline-block;
+  margin: 0px 5px;
+}
+#myTable .form-control{
+  width: auto;
+  display: inline-block;
+}
+.cart-qty-plus,
+.cart-qty-minus{
+  width: 38px;
+  height: 38px;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+}
+.cart-qty-plus:hover,
+.cart-qty-minus:hover{
+  background-color: #5171ce;
+  color: #fff;
+}
+.img-prdct{
+  width: 50px;
+  height: 64px;
+  background-color: #5171ce;
+  border-radius: 4px;
+}
+.img-prdct img{
+  width: 100%;
+}
+.table-responsive{
+  border: 1px solid #eee;
+  border-radius: 10px;
+}

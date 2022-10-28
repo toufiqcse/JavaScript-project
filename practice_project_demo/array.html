@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #array_data {
+        border: 2px solid rgb(211, 211, 211);
+        margin: 5px;
+        background-color: #eeeeee;
+        padding: 1rem;
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Javascript Array</h1>
+    <div id="array_data"></div>
+    <script>
+      let colors = ["red", "green", "blue", "yellow", "orange", "grey", "lightgray"];
+      let targetElement = document.getElementById("array_data");
+      //convert array to loop
+      //innerHTML can show only last value(bcz others value are replaced)
+      let previousColor = "";
+      for (let i = 0; i < colors.length; i++) {
+        let previousColor = targetElement.innerHTML;
+        let arrayColor = colors[i];
+        previousColor += arrayColor + " ";
+        targetElement.innerHTML = previousColor;
+      }
+    </script>
+  </body>
+</html>

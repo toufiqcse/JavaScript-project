@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #calculation {
+        border: 2px solid black;
+        margin: 5px;
+        color: green;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Javascript Calculation</h1>
+    <div id="calculation"></div>
+    <script>
+      let number1 = Number(prompt("number 1"));
+      let number2 = Number(prompt("Number 2"));
+      let myResult = number1 + number2;
+      document.getElementById("calculation").innerHTML = myResult;
+    </script>
+  </body>
+</html>

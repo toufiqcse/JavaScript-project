@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Event</title>
+    <link rel="stylesheet" href="assests/css/my-style.css" />
+    <style>
+      .section_style {
+        margin: 30px 0px;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+      .about_us_section p {
+        padding: 25px;
+        font-size: 1.2rem;
+        text-align: justify;
+      }
+      .common_bg_color {
+        width: 120px;
+        height: 120px;
+        padding: 10px;
+        box-sizing: border-box;
+        color: black;
+        margin: 0 10px;
+      }
+      #bg_color_1 {
+        background-color: black;
+        color: #fff;
+      }
+      #bg_color_2 {
+        background-color: red;
+      }
+      #bg_color_3 {
+        background-color: blue;
+      }
+      #bg_color_4 {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <section class="about_us_section section_style">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-12 d-flex ms-3 me-3">
+                    <!--========================== onclick Event=========================== -->
+                    <div onclick="process_background('about_us','black', 'white')" class="common_bg_color" id="bg_color_1">Black</div>
+
+                    <div onclick="process_background('about_us','red', 'black')" class="common_bg_color" id="bg_color_2">Red</div>
+
+                    <div onclick="process_background('about_us','blue', 'white')" class="common_bg_color" id="bg_color_3">Blue</div>
+
+                    <div onclick="process_background('about_us','orange', 'black')" class="common_bg_color" id="bg_color_4">Orange</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div onclick="process_background('yellow_color','yellow', 'red')" class="" id="">Yellow</div>
+                  </div>
+                </div>
+                <!--============================== onchange Event========================== -->
+                <div class="row">
+                  <div class="col-md-12">
+                    <form action="#">
+                      <div class="mb-3 mt-3">
+                        <label for="select" class="form-label">Change Font Size:</label>
+                        <select class="form-select" id="" onchange="change_font_size('about_us', this.value)">
+                          <option value="#">Please Select Font Size</option>
+                          <option value="18">Font size 18px</option>
+                          <option value="20">Font size 20px</option>
+                          <option value="22">Font size 22px</option>
+                        </select>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <!--============================== keyup Event========================== -->
+                <div class="row">
+                  <div class="col-md-12">
+                    <form action="#">
+                      <div class="mb-3 mt-3">
+                        <label for="name" class="form-label">Enter Your Name:</label>
+                        <input onkeyup="show_user_name()" type="text" name="name" id="name" class="form-control" />
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="col-md-6">
+          <section class="about_us_section section_style">
+            <div class="card">
+              <div class="card-body">
+                <h4>Hello <span id="show_name"></span></h4>
+                <p id="about_us">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt veniam ex sint odit. Perspiciatis porro quisquam vitae at
+                  repudiandae nesciunt?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt veniam ex sint odit. Perspiciatis porro
+                  quisquam vitae at repudiandae nesciunt? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt veniam ex sint odit.
+                  Perspiciatis porro quisquam vitae at repudiandae nesciunt?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt veniam
+                  ex sint odit. Perspiciatis porro quisquam vitae at repudiandae nesciunt?
+                </p>
+                <p id="yellow_color">Get yellow color</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="assests/js/my-script.js"></script>
+    <script src="assests/js/main.js"></script>
+  </body>
+</html>

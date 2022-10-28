@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: black;
+      }
+      #date_format {
+        background-color: #eee;
+        color: lightskyblue;
+        font-size: 1.4rem;
+        padding: 20px;
+        font-family: "Times New Roman", Times, serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Javascript Date Object</h1>
+    <div id="date_format"></div>
+    <script>
+      //date object
+      const dateObj = new Date();
+      // console.dir(dateObj);
+      //get method
+      console.log(dateObj.getDate);
+      console.log(dateObj.getDay());
+      console.log(dateObj.getFullYear());
+      console.log(dateObj.getHours());
+      console.log(dateObj.getMonth());
+      console.log(dateObj.getMinutes());
+      console.log(dateObj.getTime());
+      //set method
+      //set prevoius year
+      // dateObj.setFullYear(2010);
+      //for bengali
+      console.log(dateObj.toLocaleDateString("bn-BD"));
+      //for full bengali name
+      console.log(dateObj.toLocaleDateString("bn-BD", { day: "numeric", month: "long", year: "numeric" }));
+      //for full bengali name hours & minute
+      console.log(dateObj.toLocaleDateString("bn-BD", { day: "numeric", month: "long", year: "numeric", hour: "numeric", minute: "numeric" }));
+      //for seeting inside ID
+      const date_format = dateObj.toLocaleDateString("bn-BD", { day: "numeric", month: "long", year: "numeric", hour: "numeric", minute: "numeric" });
+      document.getElementById("date_format").innerHTML = date_format;
+    </script>
+  </body>
+</html>

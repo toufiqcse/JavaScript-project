@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #calculation_result {
+        border: 2px solid black;
+        margin: 5px;
+        color: green;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Javascript Function Calculation</h1>
+    <div id="calculation_result"></div>
+    <script>
+      //function declearation
+      function calculation(n1, n2, optype) {
+        let myResult = "";
+        switch (optype) {
+          case "+":
+            myResult = n1 + n2;
+            break;
+          case "-":
+            myResult = n1 - n2;
+            break;
+          case "*":
+            myResult = n1 * n2;
+            break;
+          case "/":
+            myResult = n1 / n2;
+            break;
+          default:
+            myResult = "Error! Please Enter Correct Operator";
+        }
+        document.getElementById("calculation_result").innerHTML = myResult;
+      }
+      let number1 = Number(prompt("Enter Number 1"));
+      let number2 = Number(prompt("Enter Number 2"));
+      let ot = Number(prompt("Enter operation type", "+"));
+      //function calling
+      calculation(number1, number2, ot);
+    </script>
+  </body>
+</html>

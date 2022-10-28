@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #toufiq_information {
+        color: rgb(53, 45, 45);
+
+        font-size: 1.5rem;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Javascript Array</h1>
+    <div id="toufiq_information"></div>
+    <script>
+      //array
+      let names = ["Toufiqul Isalm", "Hridoy Hasan", "Karim", "Monir Khan", "Rabeya Akter"];
+      let fathersName = ["Rafiqul Isalm", "Hayder Ali", "Zaman Sheikh", "Abdur Rahman", "Rejaul Karim Akanda"];
+      let emails = ["toufiqcse7@gmail.com", "hridoy003@gmail.com", "karim7@gmail.com", "monir067@gmail.com", "rebacse7@gmail.com"];
+      let phoneNumber = ["01779764552", "01773467809", "01775253675", "01893976533", "01706078562"];
+      let bcolors = ["lightblue", "lightgray", "red", "lightgreen", "#ddd"];
+      let wtextColor = ["black", "black", "#ffffff", "black", "#fff"];
+      //var
+      let personInfo = "";
+      let personInfoData = "";
+      //loop
+      for (let info = 0; info < names.length; info++) {
+        let bgColor = bcolors[info];
+        let textColor = wtextColor[info];
+        //get previous data
+        personInfoData = document.getElementById("toufiq_information").innerHTML;
+        personInfo += "<div id='toufiq_information'style= 'background-color:" + bgColor + "'>";
+        personInfo += "<ul>";
+        personInfo += "<li>Name: " + names[info] + "</li>";
+        personInfo += "<li>Fathers Name: " + fathersName[info] + "</li>";
+        personInfo += "<li>Email: " + emails[info] + "</li>";
+        personInfo += "<li>Phone Number: " + phoneNumber[info] + "</li>";
+        personInfo += "</ul>";
+        personInfo += "</div>";
+        personInfoData = personInfoData + personInfo;
+      }
+      //sset update data
+      document.getElementById("toufiq_information").innerHTML = personInfoData;
+    </script>
+  </body>
+</html>

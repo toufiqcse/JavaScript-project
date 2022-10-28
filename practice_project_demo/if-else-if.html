@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>If else if</title>
+    <!-- faviicon -->
+    <link rel="shortcut icon" href="assests/img/favicon.png" type="image/x-icon" />
+    <!-- google-fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+    <!-- common-vendor-style -->
+    <link rel="stylesheet" href="assests/css/my-style.css" />
+    <!-- main-style -->
+    <link rel="stylesheet" href="assests/css/style.css" />
+    <!-- icon -->
+    <link rel="stylesheet" href="assests/fonts/i-con/bootstrap-icons.csss" />
+    <!-- =======================================================
+  * Template Name: FlexStart - v1.10.1
+  * Template URL: flexstart-startup-template/
+  * Author: Toufiq hasan
+  * License: akota traders
+  ======================================================== -->
+  </head>
+  <body>
+    <script>
+      // Array
+      let color1 = "red";
+      let color2 = "green";
+      let color3 = "blue";
+      let color4 = "yellow";
+      let color5 = "orange";
+      // arry-notationn
+      let colors = ["red", "green", "blue", "yellow", "orange"];
+      // print
+      document.write("color 1 value:" + colors[2]);
+      // lengthth
+
+      let numberOfColors = colors.length;
+      // alert("NOC" + numberOfColors);
+      // color[0] = "red";
+      // for-loop
+      for (let i = 0; i < numberOfColors; i++) {
+        document.write("colors" + i + "index value:" + colors[i] + "<br>");
+      }
+      // assignment-operaror
+
+      // for-true
+      let firstName = "Sadia";
+      let age = 25;
+      if (age == 25) {
+        alert("age is " + age + "You are Right");
+      }
+      // for-true-false
+      if (colors[2] == "blue") {
+        let myDiv = "<div style='background-color:" + colors[2] + "; width:350px; height:100px'> My Div </div>";
+        document.write(myDiv);
+      } else {
+        let myDiv = "Color is not blue" + colors[2];
+
+        document.write(myDiv);
+      }
+      // password check with loop.
+      let myPass = prompt("Enter your password:");
+      myPass = myPass.length;
+      if (myPass >= 8) {
+        alert("Strong Password");
+      } else {
+        alert("Weak Password");
+      }
+      // ternary-operator(work for if -else in one)
+      let myMessage = prompt("Enter password").length >= 8 ? "GP" : "BP";
+      alert(myMessage);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Object</title>
+    <style>
+      #greetings {
+        border: 2px solid black;
+        margin: 5px;
+        color: green;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Javascript Object</h1>
+    <script>
+      //array of object
+      const colors = ["red", "black"];
+      const personInfo = [
+        {
+          name: "Toufiq",
+          email: "toufiqcse7@gmail.com",
+          gender: "Male",
+          age: 24,
+          contact: "01779764552",
+        },
+        {
+          name: "Toufiq",
+          email: "toufiqcse7@gmail.com",
+          gender: "Male",
+          age: 24,
+          contact: "01779764552",
+        },
+        {
+          name: "Toufiq",
+          email: "toufiqcse7@gmail.com",
+          gender: "Male",
+          age: 24,
+          contact: "01779764552",
+        },
+        {
+          name: "Toufiq",
+          email: "toufiqcse7@gmail.com",
+          gender: "Male",
+          age: 24,
+          contact: "01779764552",
+        },
+      ];
+      console.log(personInfo);
+      //object is under function
+      function greetings(greetingsData) {
+        document.write(personInfoObject.name);
+        document.write(personInfoObject.email);
+        document.write(personInfoObject.gender);
+        document.write(personInfoObject.age);
+        document.write(personInfoObject.contact);
+      }
+      let personInfoObject = {
+        name: "Toufiq",
+        email: "toufiqcse7@gmail.com",
+        gender: "Male",
+        age: 20,
+        contact: "01779764552",
+      };
+      //function calling
+      greetings(personInfoObject);
+    </script>
+  </body>
+</html>
