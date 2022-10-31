@@ -1,0 +1,70 @@
+<!-- //JS code in HTML for calculating area of square. Area is included for all shapes, -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AREAS</title>
+  </head>
+  <body>
+    id_shapes:<input
+      type="text"
+      id="id_shapes"
+      placeholder="Enter item"
+    /><br />
+    id_radius:<input
+      type="text"
+      id="id_radius"
+      placeholder="Enter item"
+    /><br />
+    id_base:<input type="text" id="id_base" placeholder="Enter item" /><br />
+    id_height:<input
+      type="text"
+      id="id_height"
+      placeholder="Enter item"
+    /><br />
+    id_side:<input type="text" id="id_side" placeholder="Enter item" /><br />
+    id_length<input type="text" id="id_length" placeholder="Enter item" /><br />
+    id_width<input
+      type="text"
+      id="id_width"
+      placeholder="Enter item"
+    /><br /><br />
+    <button id="calculate">Calculate Area</button>
+
+    <p id="id_output">?????</p>
+    <script>
+        const button = document.getElementById("calculate");
+let area = 0;
+
+function calculateArea() {
+  // get the selected shape
+  let shape = document.getElementById("id_shapes").value;
+  // calculate the shape's area
+  switch (shape) {
+    case "circle":
+      let radius = document.getElementById("id_radius").value;
+      area = Math.PI * radius * radius;
+      break;
+    case "triangle":
+      let base = document.getElementById("id_base").value;
+      let height = document.getElementById("id_height").value;
+      area = (base * height) / 2;
+      break;
+    case "square":
+      let side = document.getElementById("id_side").value;
+      area = side * side;
+      break;
+    case "rectangle":
+      let length = document.getElementById("id_length").value;
+      let width = document.getElementById("id_width").value;
+      area = length * width;
+      break;
+  }
+  document.getElementById("id_output").innerHTML = "Area = " + area;
+}
+
+button.addEventListener("click", calculateArea);
+    </script>
+  </body>
+</html>
