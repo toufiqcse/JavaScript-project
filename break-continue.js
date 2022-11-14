@@ -22,3 +22,28 @@ for (let i = 0; i < numberArray.length; i++) {
 //     break;
 //   }
 // }
+
+const productsList = [
+  { name: "Xioami -4", description: "new Arrival", price: 12000 },
+  { name: "one+", description: "Comming Soon", price: 477500 },
+  { name: "Xioami Note 8 ", description: "Brand", price: 764500 },
+  { name: "Xioami  Prom S6", description: "new Arrival", price: 47586 },
+  { name: "Techno Spark ", description: "new ", price: 34998 },
+  { name: "Realme C25Y", description: "new Arrival", price: 14500 },
+  { name: "Realme C30Y", description: "new Arrival", price: 14500 },
+];
+
+for (const product of productsList) {
+  if (product.price < 20000) {
+    continue;
+  }
+  console.log(product);
+}
+
+console.log("hiii");
+for (const product of productsList) {
+  if (product.price > 20000) {
+    break;
+  }
+  console.log(product);
+}
