@@ -9,6 +9,7 @@ function sumNumberRecursive(i) {
   if (i == 1) {
     return 1;
   }
+
   return i + sumNumberRecursive(--i);
 }
 console.log(sumNumberRecursive(50));

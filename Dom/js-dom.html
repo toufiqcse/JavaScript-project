@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to my website</h1>
+    </header>
+    <main>
+        <section>
+            <article class="blog">
+                <ul id="blog-list">
+                    <li>Blog1</li>
+                    <li>Blog-2</li>
+                    <li>blog-3</li>
+                    <li>blog-4</li>
+                </ul>
+            </article>
+            <article>
+                <h3 class="text-center">My awosome Blog-1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, vitae.</p>
+            </article>
+            <article>
+                <h3 id="second-title">My awosome Blog-2</h3>
+                <p>Asperiores dignissimos ullam beatae quasi, inventore expedita harum dolor at?</p>
+            </article>
+            <article>
+                <h3>My awosome Blog-3</h3>
+                <p>Voluptates quos laudantium quia explicabo quidem fugit nulla facilis deleniti.</p>
+            </article>
+            <div id="new">
+                
+            </div>
+        </section>
+    </main>
+    <script>
+        const secondTitle = document.getElementById("second-title");
+        secondTitle.style.color = "red";
+        secondTitle.style.backgroundColor = "green";
+        secondTitle.innerText = "I love your blog";
+
+        // create elemnt by using the JS
+         
+        // create the element
+        const li = document.createElement('li');
+        li.innerText  = 'blog-5';
+        // where to add
+        const ul = document.getElementById('blog-list');
+        // append new element
+        ul.appendChild(li);
+        // const article = document.getElementById('article');
+        
+        // article.innerHTML = `
+        // <h3> My Awosome Blog----8</h3>
+        // <p>Lorwnuhcuhs ndjhfh hhusi jhksu world health organaisation the most popular organaisation</p>
+        // `;
+
+        const newArray  = document.getElementById('new');
+        newArray.innerHTML = `
+        <h3> New Harum </h3>
+        <div>
+            <ul>
+                <li> Home </li>    
+                <li> About </li>    
+                <li> Contact US </li>    
+            </ul>    
+        </div>
+        `;
+        console.log(newArray.childNodes);
+    </script>
+</body>
+</html>

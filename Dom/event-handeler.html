@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="clicking-method"></p>
+    <input type="text" name="" id="name-field" placeholder="name">
+    <button id="update-name">Update</button>
+    <button onclick="showText()" id="buttn-handle">show Text</button>
+
+    
+
+    <script>
+        // using-direct-functions
+        document.getElementById('buttn-handle').addEventListener('click',function(){
+           const p = document.getElementById('clicking-method');
+           p.innerText =  'hello Button Handler';
+        });
+        // using-direct-functions
+        document.getElementById('update-name').addEventListener('click', function(){
+            const nameField = document.getElementById('name-field');
+            //get value of input field
+            const p = document.getElementById('clicking-method');
+            p.innerText =  nameField.value;
+            nameField.value = '';
+        })
+    </script>
+</body>
+</html>

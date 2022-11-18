@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 border-info">
+                <h2>Your Profile</h2>
+                <div class="border-2">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eius tempore iusto numquam cumque molestias neque accusamus itaque totam ipsam.</p>
+                </div>
+                <div class="comment-box">
+                    <p>Comment Here</p>
+                    <textarea name="comment" id="new-comment" cols="70" rows="3"></textarea>
+                    <button id="submit-comment" class="btn btn-success">Comment</button>
+                </div>
+                <div class="comment-container">
+                    <p>loff</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 border-1">
+                <h2>Your Story</h2>
+            </div>
+        </div>
+    </div> -->
+
+
+
+    <h2>Add your comment please..</h2>
+    <section>
+        <h4>Your Comments</h4>
+        
+        <div class="div">
+            <p>Add your comment please</p>
+            <textarea name="" id="new-comment" cols="50" rows="3"></textarea> <br>
+            <button id="submit-comment">Post</button>
+        </div>
+        <div id="comment-container">
+            <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste tenetur debitis, repudiandae expedita eaque odio corrupti optio excepturi iusto ipsam!</p>
+
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste tenetur debitis, repudiandae expedita eaque odio corrupti optio excepturi iusto ipsam!</p> -->
+        </div>
+    </section>
+<script>
+
+    // document.getElementById('submit-comment').addEventListener('click', function(){
+    //     const commentBox = document.getElementById('new-comment');
+    //     const useerComment =commentBox.value;
+
+    //     const newComment = document.createElement('new-comment');
+    //     newComment.innerText = commentBox.value;
+
+    //     const commentContainer = document.getElementById('comment-container');
+    //     commentContainer.appendChild(newComment);
+    // })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //1.add button evemnt handler
+
+
+    document.getElementById('submit-comment').addEventListener('click', function(){
+        //2. get user comment
+      const commentText = document.getElementById('new-comment');
+      const userComment = commentText.value;
+     
+     //3. create comment paragraph
+     const newComment = document.createElement('newComment');
+     
+     newComment.innerText = commentText.value;
+        
+     // 4 append the comment paragraph
+     const commentContainer = document.getElementById('comment-container');
+     commentContainer.appendChild(newComment);
+     console.log(commentContainer);
+     //clean the comment box
+     commentText.value ='';
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

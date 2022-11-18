@@ -41,6 +41,7 @@ for (const product of productsList) {
 }
 
 console.log("hiii");
+
 for (const product of productsList) {
   if (product.price > 20000) {
     break;

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Event</title>
+</head>
+<body>
+    <h1>Event Click</h1>
+    <button id="green-btn" onclick="">Click me</button>
+    <button id="orange-btn" onclick="">Click me: orange</button>
+    <button id="yellow-btn" onclick="">Click me</button>
+    <button onclick="document.body.style.backgroundColor = 'red'">Cilick me</button>
+
+    <script>
+        const greenBtn = document.getElementById("green-btn");
+        //anonymus function----
+        greenBtn.onclick = function () {
+            document.body.style.backgroundColor = "green";
+        }
+        //addeventlistener function
+        const  yellowBtn = document.getElementById("yellow-btn");
+
+        yellowBtn.addEventListener('click',makeYellowBtn);
+        function makeYellowBtn (){
+            document.body.style.backgroundColor = "yellow";
+        }
+
+        //shortcurt
+        document.getElementById("orange-btn").addEventListener('click', function(){
+            document.body.style.backgroundColor = "orange";
+        });
+    </script>
+</body>
+</html>
