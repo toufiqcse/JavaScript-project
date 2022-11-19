@@ -36,7 +36,7 @@ document.getElementById("deposit-btn").addEventListener("click", function () {
   depositInput.value = "";
 });
 
-//withdraw account balance handlers
+//=============withdraw account balance handlers
 
 document.getElementById("withdraw-btn").addEventListener("click", function () {
   const withdrawInput = document.getElementById("withdraw-input");
@@ -44,7 +44,7 @@ document.getElementById("withdraw-btn").addEventListener("click", function () {
   //convert to numbers
   const newWithDrawAmount = parseFloat(withDrawAmountText);
 
-  //set nwithdraw total amount
+  //============set nwithdraw total amount
 
   const withDrawTotal = document.getElementById("withdraw-total");
   const previousWithdrawText = withDrawTotal.innerText;
@@ -54,7 +54,7 @@ document.getElementById("withdraw-btn").addEventListener("click", function () {
   const newWithDrawTotal = previuosWithdrawTotal + newWithDrawAmount;
   withDrawTotal.innerText = newWithDrawTotal;
 
-  //after withdraw balance total amount
+  //=============after withdraw balance total amount
 
   const balanceTotalTk = document.getElementById("balance-total");
   const previousBalanceTotal = parseFloat(balanceTotalTk.innerText);
@@ -64,7 +64,7 @@ document.getElementById("withdraw-btn").addEventListener("click", function () {
 
   //   clear withdraw input
   withdrawInput.value = "";
-  //check for negative amount
+  //=========check for negative amount
   const alertnegativeAmount = document.getElementById("balance-total");
 
   if (balanceTotalTk.innerText <= 0) {
