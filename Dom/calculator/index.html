@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <div class="container max-sm max-md rounded mx-auto bg-gray-400 ">
+        <div class="output-section">
+            <!-- result-show-section -->
+            <h2 class="text-center  text-white text-xl py-2 px-3">My Calculator</h2>
+            <div id="show-result">
+                <input type="text" name="result" id="my-result" class="border block border-pink-400 rounded w-full mb-4 px-2 h-14 text-right text-2xl">
+            </div>
+        </div>
+        <!-- input-section -->
+        <div class="input-btn-section bg-gray-400 rounded">
+            <div class="grid grid-cols-4 gap-4 rounded w-full px-6 py-4 place-items-center ">
+                <div>
+                    <button onclick="deleteMe()" value="C" class="bg-gray-800 text-white rounded px-4 py-2 hover:bg-blue-600">C</button>
+                </div>
+                <div>
+                    <button onclick="calculator('(')" value="(" class="bg-gray-800 text-white rounded px-4 py-2 hover:bg-blue-600">(</button>
+                </div>
+                <div>
+                    <button onclick="calculator(')')" value=")" class="bg-gray-800 text-white rounded px-4 py-2 hover:bg-blue-600">)</button>
+                </div>
+                <div>
+                    <button onclick="calculator('')" value="m" class="bg-gray-800 text-white rounded px-4 py-2 hover:bg-blue-600">m</button>
+                </div>
+                <div>
+                    <button onclick="calculator('9')" value="9" class="bg-gray-800 text-white rounded px-4 py-2 hover:bg-blue-600">9</button>
+                </div>
+                <div>
+                    <button onclick="calculator('8')" value="8" class="bg-gray-800 text-white rounded px-4 py-2 hover:bg-blue-600">8</button>
+                </div>
+                <div>
+                    <button onclick="calculator('7')" value="7" class="bg-gray-800 text-white rounded px-4 py-2 hover:bg-blue-600">7</button>
+                </div>
+                <div>
+                    <button onclick="calculator('+')" value="+" class="bg-gray-800 text-white rounded px-4 py-2 hover:bg-blue-600">+</button>
+                </div>
+                <div>
+                    <button onclick="calculator('4')" value="4" class="bg-gray-800 text-white rounded px-4 py-2 hover:bg-blue-600">4</button>
+                </div>
+                <div>
+                    <button onclick="calculator('5')" value="5" class="bg-gray-800 text-white rounded px-4 py-2 hover:bg-blue-600">5</button>
+                </div>
+                <div>
+                    <button onclick="calculator('6')" value="6" class="bg-gray-800 text-white rounded px-4 py-2 hover:bg-blue-600">6</button>
+                </div>
+                <div>
+                    <button onclick="calculator('-')" value="-" class="bg-gray-800 text-white rounded px-4 py-2 hover:bg-blue-600">-</button>
+                </div>
+                <div>
+                    <button onclick="calculator('1')" value="1" class="bg-gray-800 text-white rounded px-4 py-2 hover:bg-blue-600">1</button>
+                </div>
+                <div>
+                    <button onclick="calculator('2')" value="2" class="bg-gray-800 text-white rounded px-4 py-2 hover:bg-blue-600">2</button>
+                </div>
+                <div>
+                    <button onclick="calculator('3')" value="3" class="bg-gray-800 text-white rounded px-4 py-2 hover:bg-blue-600">3</button>
+                </div>
+                <div>
+                    <button onclick="calculator('*')" value="*" class="bg-gray-800 text-white rounded px-4 py-2 hover:bg-blue-600">*</button>
+                </div>
+                <div>
+                    <button onclick="calculator('0')" value="0" class="bg-gray-800 text-white rounded px-4 py-2 hover:bg-blue-600">0</button>
+                </div>
+                <div>
+                    <button onclick="calculator('.')" value="." class="bg-gray-800 text-white rounded px-4 py-2 hover:bg-blue-600">.</button>
+                </div>
+                <div>
+                    <button onclick="calculator('/')" value="/" class="bg-gray-800 text-white rounded px-4 py-2 hover:bg-blue-600">/</button>
+                </div>
+                <div>
+                    <button onclick="answer('')" value="=" class="bg-gray-800 text-white rounded px-4 py-2 hover:bg-blue-600">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/calculator.js"></script>
+</body>
+</html>

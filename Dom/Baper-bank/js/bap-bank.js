@@ -1,52 +1,46 @@
+// @ts-nocheck
+//function for input values
 function getInputValue(inputId) {
-  const inputField = document.getElementById(inputId);
+  const inputFiled = document.getElementById(inputId);
   // @ts-ignore
-  const inputAmountText = inputField.value;
-  const amountValue = parseFloat(inputAmountText);
-  // clear input field
+  const inputText = inputFiled.value;
+  const amountValue = parseFloat(inputText);
+  //clear the input Field
+  console.log(amountValue);
   // @ts-ignore
-  inputField.value = "";
+  inputFiled.value = "";
   return amountValue;
 }
 
+//function to for update total Field
 function updateTotalField(totalFieldId, amount) {
-  // debugger;
   const totalElement = document.getElementById(totalFieldId);
   const totalText = totalElement.innerText;
   const previousTotal = parseFloat(totalText);
   totalElement.innerText = previousTotal + amount;
 }
 
-function getCurrentBalance() {
+//function for get cuurent balance field
+function getCurrentbalance() {
   const balanceTotal = document.getElementById("balance-total");
-  const balanceTotalText = balanceTotal.innerText;
-  const previousBalanceTotal = parseFloat(balanceTotalText);
-  return previousBalanceTotal;
+  const balanceText = balanceTotal.innerText;
+  const previousBalance = parseFloat(balanceText);
+  return previousBalance;
 }
 
+//function for update balance field
 function updateBalance(amount, isAdd) {
   const balanceTotal = document.getElementById("balance-total");
-  const previousBalanceTotal = getCurrentBalance();
+  const previousBalance = getCurrentbalance();
   if (isAdd == true) {
-    balanceTotal.innerText = previousBalanceTotal + amount;
+    balanceTotal.innerText = previousBalance + amount;
   } else {
-    // @ts-ignore
-    balanceTotal.innerText = previousBalanceTotal - amount;
+    balanceTotal.innerText = previousBalance - amount;
   }
 }
 
-function openPopup() {
-  const popup = document.getElementById("open-popup");
-  popup.classList.add("open-popup");
-  return popup;
-  console.log(popup);
-}
-function closePopup() {
-  const popup = document.getElementById("open-popup");
-  popup.classList.remove("open-popup");
-}
+// add event listner to the field
 
-// handle deposit  button
 document
   .getElementById("deposit-button")
   .addEventListener("click", function () {
@@ -57,7 +51,6 @@ document
     }
   });
 
-// handle withdraw button
 document
   .getElementById("withdraw-button")
   .addEventListener("click", function () {
@@ -71,7 +64,3 @@ document
       openPopup();
     }
   });
-//handle popupmenu
-document.getElementById("close-popup").addEventListener("click", function () {
-  closePopup();
-});

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     :root{
+        --text-color: red;
+     }
+     
+     div{
+        width: 50px;
+        height: 50px;
+        background: red;
+        border-radius: 50%;
+     }
+     .grayball:hover{
+        /* transform: scale(2);
+        animation: 500ms; */
+        transform: scale(2);
+        transition: 0.5s;
+     }
+
+     div.b {
+  white-space: nowrap; 
+  width: 50px; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  border: 1px solid #000000;
+}
+    </style>
+</head>
+<body>
+    
+    <h2>text-overflow: ellipsis:</h2>
+<div class="b">Hello world!</div>
+<div class="grayball">
+
+</div>
+
+
+</body>
+</html>
