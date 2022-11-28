@@ -9,6 +9,7 @@ function calculator(newValue) {
 
 function answer() {
   var storeInput = document.getElementById("my-result").value;
+  //   debugger;
   var calculationData = eval(storeInput);
   document.getElementById("my-result").value = calculationData;
 }
