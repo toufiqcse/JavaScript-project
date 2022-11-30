@@ -5,8 +5,8 @@ const products = [
   { name: "Xioami  Prom S6", description: "new Arrival", price: 47586 },
   { name: "Techno Spark ", description: "new ", price: 34998 },
   { name: "Realme C25Y", description: "new Arrival", price: 14500 },
+  { name: "Realme Narzo", description: "Realme", price: 14500 },
 ];
-
 function searchProduct(products, searchText) {
   const searchResult = [];
   for (const product of products) {
@@ -16,5 +16,5 @@ function searchProduct(products, searchText) {
   }
   return searchResult;
 }
-const matched = searchProduct(products, "Realme ");
+const matched = searchProduct(products, "Xioami ");
 console.log(matched);
