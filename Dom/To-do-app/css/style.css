@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 400px) {
+  .container-sm,
+  .container {
+    max-width: 390px;
+  }
+}
+@media (min-width: 576px){
+  .container-sm,
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-xxl,
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 1320px;
+  }
+}
+.dept{
+    display: flex;
+    gap: 30px;
+}
+
+input[type="radio"]{
+    appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: skyblue;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid skyblue;
+  border-radius: 50%;
+  margin-top: 5px;
+ align-items: center;
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em violet;
+  }
+  input[type="radio"]:checked::before {
+    transform: scale(1);
+    
+  }
+  input[type="radio"]:focus {
+    outline: max(2px, 0.15em) solid violet;
+    outline-offset: max(2px, 0.15em);
+  }
+ 
+
+  /* login page */
+.input-group {
+  margin-left: 30px;
+  position: relative;
+}
+
+.success input{
+  border: 2px solid green !important;
+}
+.error input{
+  border: 2px solid red !important;
+}
+
+.input-group i{
+  position: absolute;
+  top: 47px;
+  right: 10px;
+  visibility: hidden;
+}
+
+.success i.fa-circle-check{
+  visibility: visible !important;
+  color: green;
+}
+.error i.fa-circle-exclamation{
+  visibility: visible !important;
+  color: red;
+}
+
+.input-group p{
+  font-size: 12px;
+  color: red;
+  
+  padding-left: 5px;
+  visibility: hidden;
+}
+.error p{
+  visibility: visible !important;
+  
+}
