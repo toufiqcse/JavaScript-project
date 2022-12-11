@@ -6,10 +6,26 @@ const passwordInput = document.getElementById("password");
 const confirmPasswordInput = document.getElementById("confirm-password");
 
 form.addEventListener("submit", (event) => {
-  event.preventDefault();
   //call that function
   validateForm();
+  if (isFormValid() == true) {
+    form.submit();
+  } else {
+    event.preventDefault();
+  }
 });
+
+//checking  form valid
+function isFormValid() {
+  const inputContainer = form.querySelector(".input-group");
+  let result = true;
+  inputContainer.forEach((container) => {
+    if (container.classList.contains("error")) {
+      result = false;
+    }
+  });
+  return result;
+}
 
 function validateForm() {
   //username

@@ -1,0 +1,15 @@
+.error{
+    display: none;
+    color: red;
+    margin-left: 5px;
+    vertical-align: center;
+    text-align: center;
+}
+.negative-error{
+    color: red;
+    font-size: 12px;
+    margin-top: 3px;
+    display: none;
+    
+    
+}

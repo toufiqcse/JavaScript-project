@@ -39,7 +39,6 @@ function openPopup() {
   const popup = document.getElementById("open-popup");
   popup.classList.add("open-popup");
   return popup;
-  console.log(popup);
 }
 function closePopup() {
   const popup = document.getElementById("open-popup");

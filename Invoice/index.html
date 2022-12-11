@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+   <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="mt-5 p-6 mb-6">
+        <h2 class="text-center mb-4">Invoice</h2>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="row">
+               
+                <div class="col-sm-6 col-md-6">
+                    <img src="img/make-money-photography-1001.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <div class="income mb-4">
+                        <h2 class="text-center mb-4">Income</h2>
+                        
+                        <label for="income-tk" class="label-control mb-1 ">Income</label>
+                        <input type="number" name="taka" id="income-tk" min="0" max="0" class="form-control" placeholder="Enter Income Amount">
+                        
+                    </div>
+                    <!-- expanse -->
+                    <div class="expanse">
+                        <h2 class="text-center">Expanses</h2>
+                        <p class="negative-error" id="negative">Negative Number not Accepted</p>
+                        <label for="food" class="label-control mb-1">Food</label>
+                        <input type="text" class="form-control mb-2" id="food" placeholder="Enter Food cost">
+                        <label for="food" class="label-control mb-1">Rent</label>
+                        <input type="text" class="form-control" id="rent" placeholder="Enter Rent cost">
+                        <label for="clothes" class="label-control mb-1">Clothes</label>
+                        <input type="text" class="form-control mb-2" id="clothes" placeholder="Enter Clothes cost">
+
+                        <input id="calculate" type="submit" value="Calculate" class="mt-2 btn btn-info">
+                    </div>
+                    <!-- Result -->
+                    <div class="mt-3">
+                        <h6 class="text-center">Total Expanses : <span id="total-expns" >0</span> </h6>
+                    </div>
+                    <div class="mt-2 d-flex">
+                        <h6 class="text-center">Balance :<span id="total-balance"></span>    
+                        </h6>
+                        <div id="over-error" class="error mb-2">
+                            <p class=" ">You Dont Have Enough Balance..!</p>
+                        </div>
+                    </div>
+
+                    <!-- Saving Amount -->
+                    <div class="d-flex mb-4">
+                        <label for="save">Save:</label>
+                        <input type="number" name="save" id="save-amount" min="0" max="0" class="form-control mx-2"> <span>%</span>
+
+                        <input id="save-btn" type="submit" value="Save" class="btn btn-success mx-3">
+                    </div>
+                    <!-- saving amount -->
+                    <div>
+                        <h6>Saving Amount : <span id="saving-amount-balance"></span></h6>
+                    </div>
+                    <div>
+                        <h6> Remaining Balance : <span id="net-balance"></span>
+                            
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- <script src="js/app.js"></script> -->
+    <script src="functional-invoice.js"></script>
+</body>
+</html>
