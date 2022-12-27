@@ -3,10 +3,16 @@
 const searchSport = () => {
   const searchField = document.getElementById("search-field");
   const searchText = searchField.value;
+
   //clear the search field
   searchField.value = "";
+  // show spinner
+  toggleSpinner("block");
+  //   hide data during loading
+  toggleSearchResult("none");
   if (searchText == "") {
     console.log("erooorrrr");
+    toggleSpinner("none");
   } else {
     // load the data from the  API by the name
     const url = `https://www.thesportsdb.com/api/v1/json/2/searchplayers.php?p=${searchText}`;
@@ -26,7 +32,10 @@ const displaySports = (playMember) => {
   const newPlayer = playMember.player;
   const tablebody = document.getElementById("table-body");
   tablebody.textContent = "";
-  newPlayer.forEach((element) => {
+  if (!playMember) {
+    console.log("No search  results found");
+  }
+  newPlayer?.forEach((element) => {
     // console.log(element);
     const tr = document.createElement("tr");
     tr.innerHTML = `
@@ -35,8 +44,22 @@ const displaySports = (playMember) => {
     `;
     tablebody.appendChild(tr);
   });
+  toggleSpinner("none");
+  toggleSearchResult("block");
 };
-
+//pre loader
+// const loader = document.getElementById("center");
+// window.addEventListener("load", function () {
+//   loader.style.display = "none";
+// });
+// toggle spinner
+const toggleSpinner = (displayStyle) => {
+  document.getElementById("spinner").style.display = displayStyle;
+};
+// toggle spinner for display player
+const toggleSearchResult = (displayStyle) => {
+  document.getElementById("table-body").style.display = displayStyle;
+};
 const anotherPage = (playerId) => {
   const url = `https://www.thesportsdb.com/api/v1/json/2/lookupplayer.php?id=${playerId}`;
   fetch(url)

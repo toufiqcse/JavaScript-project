@@ -1,9 +1,15 @@
 // @ts-nocheck
+// spinner function
+const toggleSpinner = (displayStyle) => {
+  document.getElementById("spinner").style.display = displayStyle;
+};
 const searchFood = async () => {
   const searchField = document.getElementById("search-field");
   const seachText = searchField.value;
   //clear searchField
   searchField.value = "";
+  //spinner
+  toggleSpinner("block");
   //   console.log(seachText);
   // for empty search text
   if (seachText == "") {
@@ -17,6 +23,7 @@ const searchFood = async () => {
       </div>
     `;
     noText.appendChild(div);
+    toggleSpinner("none");
   } else {
     //load data from api
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${seachText}`;
@@ -41,7 +48,7 @@ const displaySearchResults = (meals) => {
     const div = document.createElement("div");
     div.classList.add("col");
     div.innerHTML = `
-        <div onclick = "loadMealData(${item.idMeal})" class="card">
+        <div onclick = "loadMealData(${item.idMeal})" class="card mt-4">
                 <img src="${item.strMealThumb}" class="card-img-top" alt="...">
             <div class="card-body">
                   <h5 class="card-title">${item.strMeal}</h5>
@@ -54,6 +61,9 @@ const displaySearchResults = (meals) => {
     `;
     searchResult.appendChild(div);
   });
+  toggleSpinner("none");
+  const noText = document.querySelector(".show-no-result");
+  noText.style.display = "none";
 };
 
 const loadMealData = async (mealId) => {

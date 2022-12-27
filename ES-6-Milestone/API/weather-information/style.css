@@ -1,0 +1,14 @@
+body {
+    background: #4eaf36b4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4eaf36b4, #ceb75c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #17b15f, #3cc41bb4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    color: #fff !important;
+}
+.weather-details h6{
+    padding: 8px;
+    text-align: center;
+}
+img#weather-icon{
+    margin: 0px auto !important;
+}

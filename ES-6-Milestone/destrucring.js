@@ -13,7 +13,7 @@ const fishPrice = fish.price;
 console.log(phoneNumber);
 console.log(fishPrice);
 
-//catch the property from the object and create  new variables
+// catch the property from the object and create  new variables
 const akotaTraders = {
   name: "akotaTraders",
   ceo: {
@@ -37,7 +37,6 @@ const akotaTraders = {
 
 const { frameWork, employee } = akotaTraders.services;
 console.log(frameWork, employee);
-
 const { phone } = akotaTraders.ceo;
 console.log(phone);
 
