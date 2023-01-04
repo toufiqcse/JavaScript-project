@@ -1,4 +1,12 @@
 // @ts-nocheck
+// enter key press to search the food
+const searchField = document.getElementById("search-field");
+const searchBtn = document.getElementById("button-search");
+searchField.addEventListener("keypress", function (event) {
+  if (event.key == "Enter") {
+    searchBtn.click();
+  }
+});
 // spinner function
 const toggleSpinner = (displayStyle) => {
   document.getElementById("spinner").style.display = displayStyle;
@@ -8,9 +16,11 @@ const searchFood = async () => {
   const seachText = searchField.value;
   //clear searchField
   searchField.value = "";
+
   //spinner
   toggleSpinner("block");
   //   console.log(seachText);
+
   // for empty search text
   if (seachText == "") {
     const noText = document.querySelector(".show-no-result");
@@ -19,7 +29,7 @@ const searchFood = async () => {
     div.classList.add("no-result");
     div.innerHTML = `
       <div class="p-4 bg-red warring">
-        <p class="text-cneter">Please Enter Product Name</p>
+        <p class="text-center">Please Enter Product Name</p>
       </div>
     `;
     noText.appendChild(div);
@@ -40,8 +50,8 @@ const displaySearchResults = (meals) => {
   const searchResult = document.getElementById("search-result");
 
   searchResult.textContent = ""; //for close the prevoius result
-  if (meals.length == 0) {
-    console.log("No results found");
+  if (meals.length === 0 && !item) {
+    alert("Please type a meal name");
   }
   meals.forEach((item) => {
     // console.log(item);
