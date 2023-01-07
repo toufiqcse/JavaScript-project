@@ -1,3 +1,4 @@
+// @ts-nocheck
 //global this work with browser and also node js
 globalThis.setTimeout(() => console.log("hello world"), 100);
 
@@ -54,8 +55,8 @@ Promise.allSettled([promise1, promise2, promise3]).then((Response) =>
 const email = "ToufiqCse7@gmail.Com";
 const regx = /[A-Z]/g;
 const results = email.matchAll(regx);
-console.log(resultsd);
+console.log(results);
 
-for (let match of resultsd) {
+for (let match of results) {
   console.log(match);
 }

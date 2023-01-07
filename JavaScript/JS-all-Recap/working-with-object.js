@@ -1,3 +1,4 @@
+// @ts-nocheck
 const products = {
   type: "Electric",
   displayType() {
