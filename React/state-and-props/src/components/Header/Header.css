@@ -1,0 +1,34 @@
+
+.menu a{
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 8px 10px;
+    color: rgb(75, 33, 203);
+    font-weight: bold;
+    justify-content: center;
+}
+.header{
+    display: flex;
+    background-color: lightgreen;
+    padding: 6px;
+    justify-content: center;
+}
+.countries{
+    background-color: lightcoral;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 10px;
+}
+.countries-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    
+}
+h4{
+    text-align: center;;
+}
+.countries img{
+    width: 200px;
+}
