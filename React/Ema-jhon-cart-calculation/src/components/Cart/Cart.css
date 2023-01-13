@@ -1,0 +1,8 @@
+.cart-content{
+    position: sticky;
+    top: 42px;
+    z-index: 0;
+}
+.cart-content small{
+    color: red !important;
+}

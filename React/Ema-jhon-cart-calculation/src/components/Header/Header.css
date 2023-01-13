@@ -1,0 +1,23 @@
+.navigation{
+    background: #112D4E;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 135px;
+    padding-right: 135px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.nav-menu a{
+    text-decoration: none;
+    color: #F9F7F7;
+    font-size: 20px;
+    margin-left: 36px;
+    text-align: center;
+    justify-content: center;
+}
+.navigation a:hover{
+    color: #FF2E63;
+    transition: all 0.5s ease;
+}

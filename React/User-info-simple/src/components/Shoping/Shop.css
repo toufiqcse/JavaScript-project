@@ -1,0 +1,26 @@
+.shop-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    z-index: 0;
+}
+
+.product-container{
+    padding-left: 10px;
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    background: url('../../images/Curve-Line.svg');
+    background-attachment: fixed;
+
+}
+@media screen and (max-width: 768px) {
+    .product-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.cart-container{
+   background: #DCD6F7;
+   padding-left: 10px;
+   padding-top: 10px;
+}

@@ -1,0 +1,13 @@
+.users{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 30px;
+}
+.user{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.user-content{
+    background-color: antiquewhite;
+}
